@@ -1,0 +1,66 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F84A5180-B19B-4702-A5D5-196851F9BBC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{688FB4D4-A5DF-47FF-A522-00B45A8315FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ofl.Reflection.Emit", "src\Ofl.Reflection.Emit\Ofl.Reflection.Emit.csproj", "{51EECC4D-106D-439B-97C3-5EB2C3AF0458}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ofl.Reflection.Emit.Tests", "test\Ofl.Reflection.Emit.Tests\Ofl.Reflection.Emit.Tests.csproj", "{E6D11E5A-EE71-4FEF-8916-AC8573E63A23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-level items", "solution-level items", "{606DB5C2-CA35-4C08-9FA4-58E84ED06DD7}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.gitmodules = .gitmodules
+		appveyor.yml = appveyor.yml
+		directory.build.props = directory.build.props
+		LICENSE = LICENSE
+		Ofl.Reflection.Emit.sln.DotSettings = Ofl.Reflection.Emit.sln.DotSettings
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51EECC4D-106D-439B-97C3-5EB2C3AF0458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51EECC4D-106D-439B-97C3-5EB2C3AF0458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51EECC4D-106D-439B-97C3-5EB2C3AF0458}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{51EECC4D-106D-439B-97C3-5EB2C3AF0458}.Debug|x64.Build.0 = Debug|Any CPU
+		{51EECC4D-106D-439B-97C3-5EB2C3AF0458}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{51EECC4D-106D-439B-97C3-5EB2C3AF0458}.Debug|x86.Build.0 = Debug|Any CPU
+		{51EECC4D-106D-439B-97C3-5EB2C3AF0458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51EECC4D-106D-439B-97C3-5EB2C3AF0458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51EECC4D-106D-439B-97C3-5EB2C3AF0458}.Release|x64.ActiveCfg = Release|Any CPU
+		{51EECC4D-106D-439B-97C3-5EB2C3AF0458}.Release|x64.Build.0 = Release|Any CPU
+		{51EECC4D-106D-439B-97C3-5EB2C3AF0458}.Release|x86.ActiveCfg = Release|Any CPU
+		{51EECC4D-106D-439B-97C3-5EB2C3AF0458}.Release|x86.Build.0 = Release|Any CPU
+		{E6D11E5A-EE71-4FEF-8916-AC8573E63A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6D11E5A-EE71-4FEF-8916-AC8573E63A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6D11E5A-EE71-4FEF-8916-AC8573E63A23}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E6D11E5A-EE71-4FEF-8916-AC8573E63A23}.Debug|x64.Build.0 = Debug|Any CPU
+		{E6D11E5A-EE71-4FEF-8916-AC8573E63A23}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E6D11E5A-EE71-4FEF-8916-AC8573E63A23}.Debug|x86.Build.0 = Debug|Any CPU
+		{E6D11E5A-EE71-4FEF-8916-AC8573E63A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6D11E5A-EE71-4FEF-8916-AC8573E63A23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6D11E5A-EE71-4FEF-8916-AC8573E63A23}.Release|x64.ActiveCfg = Release|Any CPU
+		{E6D11E5A-EE71-4FEF-8916-AC8573E63A23}.Release|x64.Build.0 = Release|Any CPU
+		{E6D11E5A-EE71-4FEF-8916-AC8573E63A23}.Release|x86.ActiveCfg = Release|Any CPU
+		{E6D11E5A-EE71-4FEF-8916-AC8573E63A23}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{51EECC4D-106D-439B-97C3-5EB2C3AF0458} = {F84A5180-B19B-4702-A5D5-196851F9BBC4}
+		{E6D11E5A-EE71-4FEF-8916-AC8573E63A23} = {688FB4D4-A5DF-47FF-A522-00B45A8315FE}
+	EndGlobalSection
+EndGlobal
