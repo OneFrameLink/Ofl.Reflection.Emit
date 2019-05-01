@@ -1,14 +1,15 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
 using Xunit;
 
 namespace Ofl.Reflection.Emit.Tests
 {
-    public class TypeBuilderExtensionsTests
+    public class ModuleBuilderExtensionsTests
     {
         [Fact]
-        public void Test_DefineAutoImplementedProperty()
+        public void Test_DefinePoco()
         {
             // Create the assembly.
             AssemblyBuilder assemblyBuilder = AssemblyBuilder.DefineDynamicAssembly(
@@ -17,12 +18,11 @@ namespace Ofl.Reflection.Emit.Tests
             // Create the module.
             ModuleBuilder moduleBuilder = assemblyBuilder.DefineDynamicModule("temp.dll");
 
-            // Define the type.
-            TypeBuilder typeBuilder = moduleBuilder.DefineType("Temp", TypeAttributes.Public);
-
-            // Define the properties.
-            typeBuilder.DefineAutoImplementedProperty("TempIntProperty", typeof(int));
-            typeBuilder.DefineAutoImplementedProperty("TempStringProperty", typeof(string));
+            // Define the type
+            TypeBuilder typeBuilder = moduleBuilder.DefinePoco("Temp",
+                new KeyValuePair<string, Type>("TempIntProperty", typeof(int)),
+                new KeyValuePair<string, Type>("TempStringProperty", typeof(string))
+            );
 
             // Build the type.
             Type type = typeBuilder.CreateType();

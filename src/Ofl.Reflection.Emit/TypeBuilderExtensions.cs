@@ -21,6 +21,7 @@ namespace Ofl.Reflection.Emit
             if (propertyType == null) throw new ArgumentNullException(nameof(propertyType));
 
             // Create the field.
+            // Create something that isn't normally accessible through C# or other languages.
             FieldBuilder fieldBuilder = typeBuilder.DefineField($"_${name}$",
                 propertyType, FieldAttributes.Private);
 
@@ -58,9 +59,12 @@ namespace Ofl.Reflection.Emit
             // Generate the Il for the get method.
             ILGenerator ig = methodBuilder.GetILGenerator();
 
-            // Emit the 
+            // Emit the IL necessary for getting a field.
+            // Load "this" to the stack,
             ig.Emit(OpCodes.Ldarg_0);
+            // Load the field specified from this onto the stack.
             ig.Emit(OpCodes.Ldfld, fieldBuilder);
+            // Return the top of the stack.
             ig.Emit(OpCodes.Ret);
 
             // Return the method builder.
@@ -83,10 +87,14 @@ namespace Ofl.Reflection.Emit
             // Generate the Il for the get method.
             ILGenerator ig = methodBuilder.GetILGenerator();
 
-            // Emit the 
+            // Emit the IL for setting a field.
+            // Load this
             ig.Emit(OpCodes.Ldarg_0);
+            // Load the value.
             ig.Emit(OpCodes.Ldarg_1);
+            // Set the value for the field on this.
             ig.Emit(OpCodes.Stfld, fieldBuilder);
+            // Return.
             ig.Emit(OpCodes.Ret);
 
             // Return the method builder.
